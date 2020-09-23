@@ -40,7 +40,8 @@ div.menu ul li a:hover  {
 div.hero {
     height: 350px;
     background-color: #b4c6f0;
-    background-image: url('/bg.png');
+ /* Change2:  For the image to be shown on webpage- as the image file is in same folder as all other files I removed / before the image name */
+    background-image: url('bg.png');
     background-size: 400px;
     background-repeat: no-repeat;
     background-position: center bottom;
