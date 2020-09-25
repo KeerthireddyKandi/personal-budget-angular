@@ -77,14 +77,16 @@ div.hero h2 {
 .bottom {
     height: 50px;
     background-color: #b4c6f0;
-    padding: 40px;
+    padding-top: 40px;;
+    padding-bottom: 70px;
 }
 
 .center {
     text-align: center;
+    
 }
 
-.container article.text-box {
+.container div.text-box {
     display: inline-block;
     width: 100%;
     max-width: 340px;
@@ -92,8 +94,12 @@ div.hero h2 {
     margin: 20px;
 }
 
+.lastbtn{
+    margin: auto;
+    }
+    
 @media screen and (min-width: 768px) {
-    .container .article.text-box {
+    .container .div.text-box {
         margin: 10px;
     }
 }
