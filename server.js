@@ -4,30 +4,15 @@ const port= 3000;
 
 app.use('/', express.static('public'));
 
-const budget={
-myBudget: [
-    {
-        title: 'Eat Out',
-        budget: 30
-    },
-    {
-       title: 'Rent',
-       budget: 350 
-    },
-    {
-        title: 'Groceries',
-        budget: 90
-    },
-    
-]
-};
-
 app.get('/hello', (req, res) => {
     res.send('Hello World from Express!');
   });
   
  app.get('/budget' , (req, res) => {
-    res.json(budget);
+     const file= require('fs');
+     const dataobj=file.readFileSync('new.json');
+     const BUDGET=JSON.parse(dataobj);
+    res.json(BUDGET);
   });
 
   app.listen(port, () => {
