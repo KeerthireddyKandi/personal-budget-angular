@@ -11,6 +11,10 @@ import { ArticleComponent } from './article/article.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { P404Component } from './p404/p404.component';
+import { ContactComponent } from './contact/contact.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { PieComponent } from './pie/pie.component';
+import { D3piechartComponent } from './d3piechart/d3piechart.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { P404Component } from './p404/p404.component';
     ArticleComponent,
     AboutComponent,
     LoginComponent,
-    P404Component
+    P404Component,
+    ContactComponent,
+    BreadcrumbsComponent,
+    PieComponent,
+    D3piechartComponent
   ],
   imports: [
     BrowserModule,
