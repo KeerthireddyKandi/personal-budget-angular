@@ -10,21 +10,23 @@ import { DataService } from '../data.service';
 })
 export class HomepageComponent implements AfterViewInit {
 
+
   constructor(private http: HttpClient, public dataService: DataService) {}
 
 
   ngAfterViewInit(): void {
     this.http.get('http://localhost:3000/budget')
     .subscribe((res: any) => {
-      if(this.dataService.dataSource.datasets.length == 0){
-      for(var i=0; i < res.myBudget.length; i++){
+      if(this.dataService.dataSource.datasets[0].data.length == 0){
+      for (var i= 0; i < res.myBudget.length; i++){
         this.dataService.dataSource.datasets[0].data[i]=res.myBudget[i].budget;
         this.dataService.dataSource.labels[i]= res.myBudget[i].title;
       }
     }
-        this.createChart();
-});
+      this.createChart();
 
+
+});
 }
 
 createChart() {
@@ -34,5 +36,6 @@ createChart() {
       data: this.dataService.dataSource,
   });
 }
+
 }
 
